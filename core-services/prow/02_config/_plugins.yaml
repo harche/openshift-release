@@ -1807,6 +1807,7 @@ plugins:
   - lifecycle
   - owners-label
   - retitle
+  - release-note
   - shrug
   - size
   - skip
