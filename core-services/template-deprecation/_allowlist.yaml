@@ -612,6 +612,9 @@ templates:
         pull-ci-openshift-origin-release-4.4-e2e-aws-ovn:
           generated: false
           kind: presubmit
+        release-openshift-ocp-installer-e2e-aws-cgroupsv2-4.9:
+          generated: false
+          kind: release
         release-openshift-origin-installer-e2e-aws-upgrade-4.5-stable-to-4.5-with-caps-patch:
           generated: false
           kind: release
