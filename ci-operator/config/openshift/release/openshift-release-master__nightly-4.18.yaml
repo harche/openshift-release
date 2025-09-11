@@ -219,7 +219,7 @@ tests:
     workflow: baremetalds-e2e-ovn-ipv4
 - as: e2e-metal-ipi-ovn-ipv4-cgroupsv1
   cluster: build05
-  cron: 50 15 3 8 *
+  cron: '@weekly'
   steps:
     cluster_profile: equinix-ocp-metal
     env:
@@ -230,7 +230,7 @@ tests:
     workflow: baremetalds-e2e-ovn-ipv4-cgroupsv1
 - as: e2e-metal-ipi-ovn-serial-ipv4-cgroupsv1
   cluster: build05
-  cron: 41 22 14 7 *
+  cron: '@weekly'
   steps:
     cluster_profile: equinix-ocp-metal
     observers:
@@ -340,7 +340,7 @@ tests:
     workflow: baremetalds-e2e-ovn-ipv6
 - as: e2e-metal-ipi-ovn-cgroupsv1-techpreview
   cluster: build05
-  cron: 20 15 12 6 *
+  cron: '@weekly'
   steps:
     cluster_profile: equinix-ocp-metal
     env:
