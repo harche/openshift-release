@@ -1,0 +1,27 @@
+ref:
+  as: origin-dra-nvidia-gpu-operator-install
+  from: cli
+  commands: origin-dra-nvidia-gpu-operator-install-commands.sh
+  resources:
+    requests:
+      cpu: 200m
+      memory: 200Mi
+  documentation: |-
+    Install the NVIDIA GPU Operator required by the Dynamic Resource Allocation GPU
+    end-to-end suite.
+  env:
+  - name: ORIGIN_DRA_HELM_VERSION
+    default: v3.15.4
+    documentation: Override the helm version used to install the charts.
+  - name: ORIGIN_DRA_GPU_OPERATOR_NAMESPACE
+    default: nvidia-gpu-operator
+    documentation: Namespace where the GPU operator is installed.
+  - name: ORIGIN_DRA_GPU_OPERATOR_RELEASE_NAME
+    default: gpu-operator
+    documentation: Helm release name for the GPU operator chart.
+  - name: ORIGIN_DRA_GPU_OPERATOR_CHART_URL
+    default: https://helm.ngc.nvidia.com/nvidia/charts/gpu-operator-v25.3.2.tgz
+    documentation: Source chart archive for the GPU operator.
+  - name: ORIGIN_DRA_GPU_OPERATOR_CHART_VERSION
+    default: v25.3.2
+    documentation: Chart version to install for the GPU operator.

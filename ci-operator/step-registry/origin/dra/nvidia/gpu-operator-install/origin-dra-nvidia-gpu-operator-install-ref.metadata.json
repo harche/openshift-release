@@ -1,0 +1,15 @@
+{
+  "path": "origin/dra/nvidia/gpu-operator-install/origin-dra-nvidia-gpu-operator-install-ref.yaml",
+  "owners": {
+    "approvers": [
+      "bertinatto",
+      "dgoodwin",
+      "sosiouxme"
+    ],
+    "reviewers": [
+      "bertinatto",
+      "p0lyn0mial",
+      "sjenning"
+    ]
+  }
+}

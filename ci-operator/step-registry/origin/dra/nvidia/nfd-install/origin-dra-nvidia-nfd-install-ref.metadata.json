@@ -1,0 +1,15 @@
+{
+  "path": "origin/dra/nvidia/nfd-install/origin-dra-nvidia-nfd-install-ref.yaml",
+  "owners": {
+    "approvers": [
+      "bertinatto",
+      "dgoodwin",
+      "sosiouxme"
+    ],
+    "reviewers": [
+      "bertinatto",
+      "p0lyn0mial",
+      "sjenning"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+ref:
+  as: origin-dra-nvidia-dra-driver-install
+  from: cli
+  commands: origin-dra-nvidia-dra-driver-install-commands.sh
+  resources:
+    requests:
+      cpu: 200m
+      memory: 200Mi
+  documentation: |-
+    Install the NVIDIA Dynamic Resource Allocation driver required by the GPU tests.
+  env:
+  - name: ORIGIN_DRA_HELM_VERSION
+    default: v3.15.4
+    documentation: Override the helm version used to install the charts.
+  - name: ORIGIN_DRA_DRIVER_NAMESPACE
+    default: nvidia-dra-driver-gpu
+    documentation: Namespace where the NVIDIA DRA driver is installed.
+  - name: ORIGIN_DRA_DRIVER_RELEASE_NAME
+    default: nvidia-dra-driver-gpu
+    documentation: Helm release name for the NVIDIA DRA driver chart.
+  - name: ORIGIN_DRA_DRIVER_CHART_URL
+    default: https://helm.ngc.nvidia.com/nvidia/charts/nvidia-dra-driver-gpu-25.3.1.tgz
+    documentation: Source chart archive for the NVIDIA DRA driver.
+  - name: ORIGIN_DRA_DRIVER_CHART_VERSION
+    default: "25.3.1"
+    documentation: Chart version to install for the NVIDIA DRA driver.

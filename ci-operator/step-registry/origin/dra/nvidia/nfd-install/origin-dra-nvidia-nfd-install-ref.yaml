@@ -1,0 +1,27 @@
+ref:
+  as: origin-dra-nvidia-nfd-install
+  from: cli
+  commands: origin-dra-nvidia-nfd-install-commands.sh
+  resources:
+    requests:
+      cpu: 200m
+      memory: 200Mi
+  documentation: |-
+    Install Node Feature Discovery with NVIDIA-specific labeling required by the
+    Dynamic Resource Allocation GPU end-to-end tests.
+  env:
+  - name: ORIGIN_DRA_HELM_VERSION
+    default: v3.15.4
+    documentation: Override the helm version used to install the charts.
+  - name: ORIGIN_DRA_NFD_NAMESPACE
+    default: node-feature-discovery
+    documentation: Namespace where Node Feature Discovery is installed.
+  - name: ORIGIN_DRA_NFD_RELEASE_NAME
+    default: node-feature-discovery
+    documentation: Helm release name for the Node Feature Discovery chart.
+  - name: ORIGIN_DRA_NFD_CHART_URL
+    default: https://github.com/kubernetes-sigs/node-feature-discovery/releases/download/v0.17.3/node-feature-discovery-chart-0.17.3.tgz
+    documentation: Source chart archive for Node Feature Discovery.
+  - name: ORIGIN_DRA_NFD_CHART_VERSION
+    default: v0.17.3
+    documentation: Chart version to install.

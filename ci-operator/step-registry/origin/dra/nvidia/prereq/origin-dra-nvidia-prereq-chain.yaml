@@ -1,0 +1,10 @@
+chain:
+  as: origin-dra-nvidia-prereq
+  steps:
+  - ref: origin-dra-nvidia-nfd-install
+  - ref: origin-dra-nvidia-gpu-operator-install
+  - ref: origin-dra-nvidia-dra-driver-install
+  documentation: |-
+    Prepare an OpenShift cluster with the NVIDIA prerequisites required by the
+    Dynamic Resource Allocation GPU end-to-end suite by installing Node Feature
+    Discovery, the NVIDIA GPU operator, and the NVIDIA DRA driver.

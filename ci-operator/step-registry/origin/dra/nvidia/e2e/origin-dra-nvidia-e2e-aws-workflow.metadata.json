@@ -1,0 +1,15 @@
+{
+  "path": "origin/dra/nvidia/e2e/origin-dra-nvidia-e2e-aws-workflow.yaml",
+  "owners": {
+    "approvers": [
+      "bertinatto",
+      "dgoodwin",
+      "sosiouxme"
+    ],
+    "reviewers": [
+      "bertinatto",
+      "p0lyn0mial",
+      "sjenning"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+workflow:
+  as: origin-dra-nvidia-e2e-aws
+  steps:
+    allow_best_effort_post_steps: true
+    pre:
+    - chain: ipi-conf-aws
+    - ref: ovn-conf
+    - chain: ipi-install
+    - chain: origin-dra-nvidia-prereq
+    test:
+    - ref: openshift-e2e-test
+    post:
+    - chain: gather-network
+    - chain: gather-core-dump
+    - chain: ipi-deprovision
+    env:
+      FAIL_ON_CORE_DUMP: "false"
+  documentation: |-
+    Install an AWS IPI cluster with OVN, apply the NVIDIA GPU prerequisites, and run
+    the openshift/dra-gpu-validation test suite.
